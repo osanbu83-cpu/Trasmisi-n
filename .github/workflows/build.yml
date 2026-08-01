@@ -24,7 +24,7 @@ jobs:
       uses: gradle/actions/setup-gradle@v3
 
     - name: Compilar APK (Debug)
-      run: gradle assembleDebug
+      run: gradle assembleDebug --no-daemon --stacktrace
 
     - name: Subir APK generado
       uses: actions/upload-artifact@v4
